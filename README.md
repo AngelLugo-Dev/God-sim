@@ -2,6 +2,16 @@
 
 MVP de un god sim en pixel art, construido con React, Vite y Tailwind CSS.
 
+El proyecto está pensado para trabajarse siempre con pnpm. Ya existe el lockfile de pnpm y el flujo recomendado es no volver a generar `package-lock.json`.
+
+## Arquitectura rápida
+
+- Estado global en `src/App.tsx` con `fe`, `poblacion`, `recursos` e `historial`.
+- Un intérprete de comandos simple procesa la consola inferior.
+- El templo y los aldeanos se renderizan con divs y animaciones CSS.
+- La fe se genera de forma pasiva cada 5 segundos por ciudadano.
+- La documentación ampliada vive en `docs/arquitectura-logica.md` y `docs/informe-implementacion.md`.
+
 ## Loop principal
 
 - Escribe comandos en la consola inferior.
@@ -18,9 +28,13 @@ MVP de un god sim en pixel art, construido con React, Vite y Tailwind CSS.
 
 ## Arranque
 
-1. Instala dependencias con `npm install`.
-2. Ejecuta `npm run dev`.
-3. Compila con `npm run build` cuando quieras validar el estado del proyecto.
+1. Instala dependencias con `pnpm install`.
+2. Ejecuta `pnpm dev`.
+3. Compila con `pnpm build` cuando quieras validar el estado del proyecto.
+
+## Informe breve
+
+Se creó la base completa del primer commit del prototipo: scaffold Vite + React + TypeScript + Tailwind, UI principal, intérprete de comandos, sistema de fe pasiva, feedback visual para RAYO y documentación base. El proyecto quedó listo para iterar sin backend y con enfoque de prototipado rápido.
 
 ## Notas de implementación
 
